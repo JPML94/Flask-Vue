@@ -20,12 +20,10 @@
 	$ npm --v
 	```
 
-* Python 3 is installed (tested with 3.6). Type 'exit()' to get out of the python shell
+* Python 3 is installed (tested with 3.6). Type 'exit()' to get out of the python shell.
 	```
 	$ python3
 	```
-
-##### Template and Dependencies
 
 * Clone this repository:
 
