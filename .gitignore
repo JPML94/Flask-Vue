@@ -1,5 +1,6 @@
 *.pyc
 .cache
+flask-vue-firebase-adminsdk-zx5op-7ce9c8ae3e.json
 
 .DS_Store
 node_modules/
