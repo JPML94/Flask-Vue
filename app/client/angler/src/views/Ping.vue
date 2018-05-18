@@ -12,29 +12,29 @@
 </template>
 
 <script>
-import $backend from "../backend";
+import $backend from '../backend'
 
 export default {
-  name: "test",
-  data() {
+  name: 'test',
+  data () {
     return {
       resources: [],
-      error: ""
-    };
+      error: ''
+    }
   },
   methods: {
-    fetchPingResource() {
+    fetchPingResource () {
       $backend
         .fetchPingResource()
         .then(responseData => {
-          this.resources.push(responseData);
+          this.resources.push(responseData)
         })
         .catch(error => {
-          this.error = error.message;
-        });
+          this.error = error.message
+        })
     }
   }
-};
+}
 </script>
 
 <style lang="scss">

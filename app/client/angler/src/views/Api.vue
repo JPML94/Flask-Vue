@@ -13,39 +13,39 @@
 </template>
 
 <script>
-import $backend from "../backend";
+import $backend from '../backend'
 
 export default {
-  name: "about",
-  data() {
+  name: 'about',
+  data () {
     return {
       resources: [],
-      error: ""
-    };
+      error: ''
+    }
   },
   methods: {
-    fetchResource() {
+    fetchResource () {
       $backend
         .fetchResource()
         .then(responseData => {
-          this.resources.push(responseData);
+          this.resources.push(responseData)
         })
         .catch(error => {
-          this.error = error.message;
-        });
+          this.error = error.message
+        })
     },
-    fetchSecureResource() {
+    fetchSecureResource () {
       $backend
         .fetchSecureResource()
         .then(responseData => {
-          this.resources.push(responseData);
+          this.resources.push(responseData)
         })
         .catch(error => {
-          this.error = error.message;
-        });
+          this.error = error.message
+        })
     }
   }
-};
+}
 </script>
 
 <style lang="scss">
