@@ -2,6 +2,11 @@
 
 import os
 from app import app
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate('/home/jpml/dev/flask-vue/flask-vue-firebase-adminsdk-zx5op-7ce9c8ae3e.json')
+default_app = firebase_admin.initialize_app(cred)
 
 
 class Config(object):
