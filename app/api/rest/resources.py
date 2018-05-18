@@ -30,3 +30,11 @@ class SecureResourceOne(SecureResource):
     def get(self, resource_id):
         timestamp = datetime.utcnow().isoformat()
         return {'timestamp': timestamp}
+
+
+@api_rest.route('/ping-resource/<string:resource_id>')
+class PingResource(BaseResource):
+    """Test Ping Resource"""
+
+    def get(self, resource_id):
+        return {'value': 'ping!!!'}

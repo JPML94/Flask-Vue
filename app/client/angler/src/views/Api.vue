@@ -3,7 +3,7 @@
     <h1>Backend Resources Demo</h1>
     <p>Click on the links below to fetch data from the Flask server</p>
     <a href="" @click.prevent="fetchResource">Fetch</a><br/>
-    <a href="" @click.prevent="fetchSecureResource">Fetch Secure Resource</a>
+    <a href="" @click.prevent="fetchSecureResource">Fetch Secure Resource</a><br/>
     <h4>Results</h4>
     <p v-for="r in resources" :key="r.timestamp">
       Server Timestamp: {{r.timestamp | formatTimestamp }}
@@ -13,39 +13,39 @@
 </template>
 
 <script>
-import $backend from '../backend'
+import $backend from "../backend";
 
 export default {
-  name: 'about',
-  data () {
+  name: "about",
+  data() {
     return {
       resources: [],
-      error: ''
-    }
+      error: ""
+    };
   },
   methods: {
-    fetchResource () {
+    fetchResource() {
       $backend
         .fetchResource()
         .then(responseData => {
-          this.resources.push(responseData)
+          this.resources.push(responseData);
         })
         .catch(error => {
-          this.error = error.message
-        })
+          this.error = error.message;
+        });
     },
-    fetchSecureResource () {
+    fetchSecureResource() {
       $backend
         .fetchSecureResource()
         .then(responseData => {
-          this.resources.push(responseData)
+          this.resources.push(responseData);
         })
         .catch(error => {
-          this.error = error.message
-        })
+          this.error = error.message;
+        });
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
