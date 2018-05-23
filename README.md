@@ -32,13 +32,18 @@
 	$ cd Flask-Vue
 	```
 
-* Create a virtual enviroment and install the packages located in Pipfile:
+##### Create a virtual enviroment inside the project folder and install the packages located in Pipfile:
+ - For Windows and Linux:
 	```
 	$ pip install --user pipenv
 	$ pipenv install
 	```
+ - For Mac:
+	```
+	$ brew install pipenv
+	```
 
-* Install npm dependencies
+* Install npm dependencies for client side
 
 	```
 	$ cd app/client/angler
@@ -53,6 +58,8 @@ Make sure you're inside your virtual environment before starting the server and 
 $ pipenv shell
 ```
 
+Make sure to do this on the root application folder, in this case called 'Flask-Vue'
+
 ##### Api Server
 
 From the root directory run:
@@ -61,12 +68,12 @@ From the root directory run:
 $ python -m app serve_api
 ```
 
-This will start the flask development server on `localhost:5000` and will respond to all requests on `/api.`.
+This will start the flask development server on `localhost:5000` (renders dist folder on angler app) and will respond to all requests on `/api.`.
 This command is the same as running `python run.py`
 
 ##### Client Server
 
-Start another terminal window, and from the same directory run:
+Start another terminal window, make sure you're in the project folder and virtual environment active (pipenv shell), then run:
 
 ```
 $ python -m app serve_client
