@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/api">API Test</router-link> |
-      <router-link to="/ping">Ping Test</router-link>
+      <router-link to="/ping">Ping Test</router-link> |
+      <router-link to="/modal">Modal Test</router-link>
     </div>
     <router-view/>
   </div>
