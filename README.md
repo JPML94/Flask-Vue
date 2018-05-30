@@ -120,3 +120,20 @@ This commands is a shorcut for cd-ing into `/app/client/vue_app` and running `$ 
 * Push your application to heroku:
 
 	```$ git push heroku```
+
+
+### VueX rundown: [WIP]
+
+Vuex is the state management system built for Vue. Known as the Store in the actual app. 
+
+The best way to manage different logic is with store modules, easy to create and make available to whole app. 
+
+A single store module should have this four elements/functions:
+
+  - State = variables you want to initialize and make available to the app.
+
+  - Getters = one of methods to  return the state of a specific variable. This gets hooked up to your component via computed property inside script tag in your component, needs to import mapGetters from vuex
+
+  - Mutations = the methods that actually change the state. Try to keep as minimal as possible
+
+  - Actions = Methods that commit mutations, these are where the main logic will reside to actually get the data to change the state. Will contain async operations. Make sure to separate all api calls to their own file. Will hook up to the methods in your components. Need to import mapActions from vuex.
